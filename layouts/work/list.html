@@ -1,0 +1,20 @@
+{{ define "main" }}
+<!--  <h1>{{ .Title }}</h1> -->
+  {{ .Content }}
+
+
+{{ range (where .Site.RegularPages "Section" "work").GroupByDate "2006" }}
+  <h2>{{ .Key }}</h2> <!-- Prints the Year (e.g., 2026) -->
+  <ul class=post-list>
+    {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <!-- ({{ .Date.Format "Jan 2" }}) -->
+      </li>
+    {{ end }}
+  </ul>
+
+
+  {{ end }}
+{{ end }}
+

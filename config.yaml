@@ -1,0 +1,8 @@
+baseURL: 'https://noabuehler.de/'
+Language:
+  Locale: 'en-us'
+title: 'noa buehler'
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
